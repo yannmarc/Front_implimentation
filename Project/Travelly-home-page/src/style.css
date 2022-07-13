@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bar {
+        width: 40px;
+        height: 5px;
+        background-color: #FFFFFF;
+        margin-bottom: .5em;
+        display: inline-block;
+    }
+
+    .logo-text {
+        @apply text-lg text-white ml-2;
+    }
+
+    .big-heading {
+        @apply text-5xl text-white text-center font-thin md:text-6xl;
+    }
+
+    .wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    .nav-link-container {
+        @apply md:flex items-center gap-2 font-medium
+    }
+    .nav-link {
+        @apply mb-2
+    }
+    .mobile-navbar-container {
+        @apply absolute top-12 left-0 w-full bg-blue-300 py-8 pl-4 hidden;
+    }
+    .header {
+        background-image: url('../public/assets/img/hero.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .subscribe {
+        width: 235px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+    }
+    input[type=email] {
+        height: 45px;
+    }
+    input::placeholder{
+        font-size: 10px;
+        font-weight: 500;
+    }
+    .card-img-container {
+        width: 100%;
+        height: 127px;
+    }
+    .card-img {
+        width: 100%;
+        object-fit: cover;
+    }
+    .desc {
+        padding: 1.5em 2em;
+        background-color: red;
+        color: red;
+    }
+}
+
+@layer components {
+    .hamburger-menu { 
+        @apply flex flex-col items-center;
+        @apply w-10 md:bg-none;
+    }
+
+    .navbar {
+        @apply flex justify-between items-center relative items-center px-4 py-2 mt-32;
+        
+    }
+
+    .logo {
+        @apply flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .subscribe {
+        width: 500px
+    }
+}
